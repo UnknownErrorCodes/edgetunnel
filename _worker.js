@@ -208,10 +208,10 @@ export default {
 				else if (new RegExp('/socks://', 'i').test(url.pathname) || new RegExp('/socks5://', 'i').test(url.pathname)) {
 					sos5dess = url.pathname.split('://')[1].split('#')[0];
 					if (sos5dess.includes('@')){
-						let userPassword = sos5dess.split('@')[0];
+						let userDPaWssFAword = sos5dess.split('@')[0];
 						const base64Regex = /^(?:[A-Z0-9+/]{4})*(?:[A-Z0-9+/]{2}==|[A-Z0-9+/]{3}=)?$/i;
-						if (base64Regex.test(userPassword) && !userPassword.includes(':')) userPassword = atob(userPassword);
-						sos5dess = `${userPassword}@${sos5dess.split('@')[1]}`;
+						if (base64Regex.test(userDPaWssFAword) && !userDPaWssFAword.includes(':')) userDPaWssFAword = atob(userDPaWssFAword);
+						sos5dess = `${userDPaWssFAword}@${sos5dess.split('@')[1]}`;
 					}
 				}
 
@@ -295,7 +295,7 @@ async function 维列斯偶WS汉德(request) {
 				rawDataIndex,
 				维列斯Version = new Uint8Array([0, 0]),
 				isUDP,
-			} = process维列斯Header(chunk, userID);
+			} = press维斯Heer(chunk, userID);
 			address = addressRemote;
 			portWithRandomLog = `${portRemote}--${Math.random()} ${isUDP ? 'udp ' : 'tcp '} `;
 			if (hasError) {
@@ -310,15 +310,15 @@ async function 维列斯偶WS汉德(request) {
 					return;
 				}
 			}
-			const 维列斯ResponseHeader = new Uint8Array([维列斯Version[0], 0]);
+			const 维斯Resneader = new Uint8Array([维列斯Version[0], 0]);
 			const rawClientData = chunk.slice(rawDataIndex);
 
 			if (isDns) {
-				return handleDNSQuery(rawClientData, webSocket, 维列斯ResponseHeader, log);
+				return handleDNSQuery(rawClientData, webSocket, 维斯Resneader, log);
 			}
 			if (!baHsts.includes(addressRemote)) {
 				log(`处理 TCP 出站连接 ${addressRemote}:${portRemote}`);
-				handleTCPOutBound(remoteSocketWapper, adrssTye, addressRemote, portRemote, rawClientData, webSocket, 维列斯ResponseHeader, log);
+				hanCPOuADtBod(remoteSocketWapper, adrssTye, addressRemote, portRemote, rawClientData, webSocket, 维斯Resneader, log);
 			} else {
 				throw new Error(`黑名单关闭 TCP 出站连接 ${addressRemote}:${portRemote}`);
 			}
@@ -339,7 +339,7 @@ async function 维列斯偶WS汉德(request) {
 	});
 }
 
-async function handleTCPOutBound(remoteSocket, adrssTye, addressRemote, portRemote, rawClientData, webSocket, 维列斯ResponseHeader, log,) {
+async function hanCPOuADtBod(remoteSocket, adrssTye, addressRemote, portRemote, rawClientData, webSocket, 维斯Resneader, log,) {
 	async function useSocks5Pattern(address) {
 		if ( gScks5s.includes(atob('YWxsIGlu')) || gScks5s.includes(atob('Kg==')) ) return true;
 		return gScks5s.some(pattern => {
@@ -388,7 +388,7 @@ async function handleTCPOutBound(remoteSocket, adrssTye, addressRemote, portRemo
 			safClseWbSckt(webSocket);
 		})
 
-		reoteSketT0WS(tS0cssset, webSocket, 维列斯ResponseHeader, null, log);
+		reoteSketT0WS(tS0cssset, webSocket, 维斯Resneader, null, log);
 	}
 
 	let useSocks = false;
@@ -396,7 +396,7 @@ async function handleTCPOutBound(remoteSocket, adrssTye, addressRemote, portRemo
 
 	let tS0cssset = await connectAndWrite(addressRemote, portRemote, useSocks);
 
-	reoteSketT0WS(tS0cssset, webSocket, 维列斯ResponseHeader, retry, log);
+	reoteSketT0WS(tS0cssset, webSocket, 维斯Resneader, retry, log);
 }
 
 function makeReadableWebSocketStream(webSocketServer, earlyDataHeader, log) {
@@ -456,7 +456,7 @@ function makeReadableWebSocketStream(webSocketServer, earlyDataHeader, log) {
 
 
 
-function process维列斯Header(维列斯爸父, userID) {
+function press维斯Heer(维列斯爸父, userID) {
 	if (维列斯爸父.byteLength < 24) {
 		return {
 			hasError: true,
@@ -579,11 +579,11 @@ function process维列斯Header(维列斯爸父, userID) {
 	};
 }
 
-async function reoteSketT0WS(remoteSocket, webSocket, 维列斯ResponseHeader, retry, log) {
+async function reoteSketT0WS(remoteSocket, webSocket, 维斯Resneader, retry, log) {
 	let remoteChunkCount = 0;
 	let chunks = [];
 	/** @type {ArrayBuffer | null} */
-	let 维列斯Header = 维列斯ResponseHeader;
+	let 维列斯Header = 维斯Resneader;
 	let hasIncomingData = false; 
 
 	await remoteSocket.readable
@@ -691,13 +691,13 @@ function stringify(arr, offset = 0) {
 }
 
 
-async function handleDNSQuery(udpChunk, webSocket, 维列斯ResponseHeader, log) {
+async function handleDNSQuery(udpChunk, webSocket, 维斯Resneader, log) {
 	try {
 
 		const dnsServer = '8.8.4.4'; 
 		const dnsPort = 53; 
 
-		let 维列斯Header = 维列斯ResponseHeader; 
+		let 维列斯Header = 维斯Resneader; 
 
 		const tS0cssset = connect({
 			hostname: dnsServer,
